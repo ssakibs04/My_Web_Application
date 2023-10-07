@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+
+
+
+
+<h2>SignUp</h2>
+
+
+<form action="" method="post">
+    Name : <input type="text" value="@(Model==null ? "": Model.Name)" name="Name" placeholder="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+
+    UserName: <input type="text" value="@(Model==null ? "":Model.Username)" name="Username"placeholder="Username" /><br />
+ 
+    <span class="text-danger">@Html.ValidationMessage("Username")</span><br />
+
+    Password : <input type="password" value="@(Model==null? "": Model.Password)" name="Password" placeholder="Password"/><br />
+ 
+    <span class="text-danger">@Html.ValidationMessage("Password")</span><br />
+ 
+   
+    <input type="submit" value="Sign Up" />
+</form>

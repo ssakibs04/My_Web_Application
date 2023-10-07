@@ -1,0 +1,21 @@
+﻿
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<h2>Login</h2>
+<form action="" method="post">
+
+<input type="text" value="@(Model==null  ?  "":  Model.LoginUsername)" class="form-control" name="LoginUsername" placeholder="Username" />
+<span class="text-danger">@Html.ValidationMessage("LoginUserNAme")</span>
+
+<br />
+<input type="password" value="@(Model==null ? "" : Model.LoginPassword)" class="form-control" name="LoginPassword" placeholder="Password" />
+<span class="text-danger">@Html.ValidationMessage("LoginPassword")</span>
+<br />
+
+<input type="submit" value="Login" class="btn btn-danger" />
+</form>
+
